@@ -56,14 +56,25 @@
             font-size: 16px;
         }
 
+        /* CONSISTENT CONTAINER STYLING - Same as main website */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            width: 100%;
+        }
+
+        /* Ensure all sections use the same container */
+        .blog-section .container,
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
         }
 
         /* Header & Navigation */
- header {
+        header {
             position: fixed;
             top: 0;
             width: 100%;
@@ -136,85 +147,6 @@
             color: var(--main-color);
         }
 
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--main-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
-            color: var(--light-text-color);
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            padding-top: 100px;
-        }
-
-        .hero .container {
-            display: flex;
-            align-items: center;
-            text-align: left;
-            position: relative;
-            min-height: 500px;
-            z-index: 2;
-        }
-
-        .hero-content {
-            flex: 1;
-            padding-right: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .heading-logo {
-            width: clamp(250px, 50vw, 600px); 
-            height: auto;
-            max-width: 100%;
-            display: block;
-            margin-bottom: 1.5rem;
-        }
-        .h1-size-text {
-            font-family: 'Abadi MT', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: normal; /* not bold */
-            margin: 0;
-            color: var(--light-text-color);
-        }
-
-
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 1rem;
-            color: var(--light-text-color);
-        }
-
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            margin-bottom: 2rem;
-            max-width: 600px;
-            color: var(--light-text-color);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--light-text-color);
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: var(--card-bg-color);
-            color: var(--main-color);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
         /* General Sections Styling */
         .new-footer-section {
             padding: 100px 0;
@@ -222,7 +154,6 @@
         .new-footer-section {
             background: rgba(178, 172, 136, 1);
         }
-
 
         .section-title {
             text-align: center;
@@ -244,21 +175,11 @@
             border-radius: 2px;
         }
 
-        /* Research Section */
-        .research {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #99686E 0%, #DCAE96 100%);
-            color: white;
-            text-align: center;
-        }
-
         /* Blog Section */
         .blog-section {
-           background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 50%, var(--main-color) 100%);
-
-
-
-            padding: 100px 0;
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 50%, var(--main-color) 100%);
+            padding: 140px 0 100px 0; /* Added top padding to account for fixed header */
+            min-height: 100vh;
         }
 
         .blog-grid {
@@ -270,7 +191,6 @@
 
         .blog-post {
             background: linear-gradient(135deg, var(--main-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
-
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             overflow: hidden;
@@ -284,15 +204,15 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
-.post-image {
-    width: calc(100% - 60px); /* Shrink width to create space */
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-    border-top-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-    margin: 35px auto 0; /* Creates top & side space */
-}
+        .post-image {
+            width: calc(100% - 60px);
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            border-top-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            margin: 35px auto 0;
+        }
 
         .post-content {
             padding: 2rem;
@@ -363,34 +283,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-
-        /* Enhanced Research Section - Additional Styles */
-        @media (max-width: 480px) {
-        }
-
-        @media (max-width: 768px) {
-        }
-        
-        /* Footer Section Styling */
-        .new-footer-section {
-            background-color: var(--footer-bg-color);
-            padding: 60px 0;
-        }
-
-        /* Mobile Menu and Responsive Adjustments */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--main-color);
-        }
-
-        .mobile-menu-btn.active + .nav-links {
-            display: flex;
-        }
-
         .whatsapp-btn {
             position: fixed;
             bottom: 20px;
@@ -417,12 +309,22 @@
 
         /* Mobile responsive */
         @media (max-width: 768px) {
+            /* Ensure consistent container padding on mobile */
+            .container,
+            .blog-section .container,
+            header .container {
+                padding: 0 15px; /* Slightly reduced padding for mobile */
+            }
+            
             header {
                 padding: 0.8rem 0;
+                height: 80px;
             }
+            
             .logo-image {
                 height: 60px;
             }
+            
             .nav-links {
                 display: none;
                 position: absolute;
@@ -435,69 +337,41 @@
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
                 z-index: 999;
             }
+            
             .nav-links.active {
                 display: flex;
             }
+            
             .mobile-menu-btn {
                 display: block;
             }
-            .hero .container {
-                flex-direction: column-reverse;
-                text-align: center;
-                min-height: auto;
+            
+            .blog-section {
+                padding: 100px 0 60px 0;
             }
-            .hero-content {
-                padding-right: 0;
-                align-items: center;
-            }
-.more-text {
-    display: none;
-}
-
-            .new-footer-main {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .new-footer-about, .new-footer-links {
-                width: 100%;
-                text-align: center;
-            }
-            .new-footer-links {
-                justify-content: center;
-                gap: 2rem;
-            }
-            .social-icons {
-                text-align: center;
-            }
-            /* Mobile responsive for packages */
-            .package-item, .package-item:nth-child(even) {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            .package-image {
-                flex: none;
-                width: 100%;
-                max-width: 400px;
-                height: 200px;
-                border-radius: 15px;
-            }
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-            /* Mobile carousel for detailed services */
-            .detailed-services-grid {
+            
+            .more-text {
                 display: none;
             }
-            .mobile-carousel {
-                display: block;
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container,
+            .blog-section .container,
+            header .container {
+                padding: 0 10px;
             }
         }
     </style>
 </head>
 
 <body>
- <header>
+    <header>
         <nav class="container">
             <a href="#home" class="logo" aria-label="PS4Wellbeing Home">
                 <img src="image/loggooo.png" class="logo-image" alt="PS4Wellbeing Logo">
@@ -506,7 +380,7 @@
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#packages">Programs</a></li>
-                <li><a href="index.html#research">Research</a></li>
+                <li><a href="#research">Research</a></li>
                 <li><a href="index.html#detailed-services">Our Expertise</a></li>
                 <li><a href="blog.html" id="blog-link">Blog</a></li>
                 <li><a href="https://wa.me/+974 66648078" target="_blank">Free Consult</a></li>
@@ -516,11 +390,9 @@
         </nav>
     </header>
 
-
     <section id="blog" class="blog-section">
         <div class="container">
-
-            <h2 class="section-title"><br>Our Insights</h2>
+            <h2 class="section-title">Our Insights</h2>
             <div class="blog-grid">
                 <article class="blog-post">
                     <div class="post-image" style="background-image: url('image/3.jpg');"></div>
@@ -528,21 +400,19 @@
                         <h3 class="post-title">The Power of Positive Psychology in the Workplace</h3>
                         <p class="post-meta">By PS4Wellbeing | August 10, 2025</p>
                         <p class="post-excerpt">
-   Starting your day with intention can set the tone for everything that follows. A well-structured morning routine not only boosts productivity but also improves mental clarity and emotional balance.
+                            Starting your day with intention can set the tone for everything that follows. A well-structured morning routine not only boosts productivity but also improves mental clarity and emotional balance.
 
-    <span class="more-text" style="display:none;">
-       Begin with a few minutes of mindfulness—this could be meditation, deep breathing, or simply enjoying a quiet moment without distractions. This practice helps you ground yourself and approach the day with focus. Next, incorporate light physical activity such as stretching, yoga, or a brisk walk. Physical movement wakes up your body, increases energy levels, and stimulates the mind.
+                            <span class="more-text" style="display:none;">
+                                Begin with a few minutes of mindfulness—this could be meditation, deep breathing, or simply enjoying a quiet moment without distractions. This practice helps you ground yourself and approach the day with focus. Next, incorporate light physical activity such as stretching, yoga, or a brisk walk. Physical movement wakes up your body, increases energy levels, and stimulates the mind.
 
-Fuel your body with a healthy breakfast rich in protein, fiber, and essential nutrients. Avoid rushing through your meal; instead, use this time to plan your day and prioritize key tasks. Journaling can also be a powerful addition—writing down your goals and intentions creates a sense of purpose.
+                                Fuel your body with a healthy breakfast rich in protein, fiber, and essential nutrients. Avoid rushing through your meal; instead, use this time to plan your day and prioritize key tasks. Journaling can also be a powerful addition—writing down your goals and intentions creates a sense of purpose.
 
-Finally, minimize early-morning exposure to emails and social media. Give yourself at least 30 minutes to focus inward before engaging with the outside world.
+                                Finally, minimize early-morning exposure to emails and social media. Give yourself at least 30 minutes to focus inward before engaging with the outside world.
 
-By consistently following a morning routine tailored to your lifestyle, you’ll find yourself more organized, less stressed, and better equipped to tackle daily challenges with confidence.
-
-    </span>
-</p>
-<a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-
+                                By consistently following a morning routine tailored to your lifestyle, you'll find yourself more organized, less stressed, and better equipped to tackle daily challenges with confidence.
+                            </span>
+                        </p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="blog-post">
@@ -551,21 +421,19 @@ By consistently following a morning routine tailored to your lifestyle, you’ll
                         <h3 class="post-title">Job Crafting: Redefining Your Role for Greater Fulfillment</h3>
                         <p class="post-meta">By PS4Wellbeing | July 28, 2025</p>
                         <p class="post-excerpt">
-   Starting your day with intention can set the tone for everything that follows. A well-structured morning routine not only boosts productivity but also improves mental clarity and emotional balance.
+                            Starting your day with intention can set the tone for everything that follows. A well-structured morning routine not only boosts productivity but also improves mental clarity and emotional balance.
 
-    <span class="more-text" style="display:none;">
-       Begin with a few minutes of mindfulness—this could be meditation, deep breathing, or simply enjoying a quiet moment without distractions. This practice helps you ground yourself and approach the day with focus. Next, incorporate light physical activity such as stretching, yoga, or a brisk walk. Physical movement wakes up your body, increases energy levels, and stimulates the mind.
+                            <span class="more-text" style="display:none;">
+                                Begin with a few minutes of mindfulness—this could be meditation, deep breathing, or simply enjoying a quiet moment without distractions. This practice helps you ground yourself and approach the day with focus. Next, incorporate light physical activity such as stretching, yoga, or a brisk walk. Physical movement wakes up your body, increases energy levels, and stimulates the mind.
 
-Fuel your body with a healthy breakfast rich in protein, fiber, and essential nutrients. Avoid rushing through your meal; instead, use this time to plan your day and prioritize key tasks. Journaling can also be a powerful addition—writing down your goals and intentions creates a sense of purpose.
+                                Fuel your body with a healthy breakfast rich in protein, fiber, and essential nutrients. Avoid rushing through your meal; instead, use this time to plan your day and prioritize key tasks. Journaling can also be a powerful addition—writing down your goals and intentions creates a sense of purpose.
 
-Finally, minimize early-morning exposure to emails and social media. Give yourself at least 30 minutes to focus inward before engaging with the outside world.
+                                Finally, minimize early-morning exposure to emails and social media. Give yourself at least 30 minutes to focus inward before engaging with the outside world.
 
-By consistently following a morning routine tailored to your lifestyle, you’ll find yourself more organized, less stressed, and better equipped to tackle daily challenges with confidence.
-
-    </span>
-</p>
-<a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-
+                                By consistently following a morning routine tailored to your lifestyle, you'll find yourself more organized, less stressed, and better equipped to tackle daily challenges with confidence.
+                            </span>
+                        </p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="blog-post">
@@ -574,21 +442,19 @@ By consistently following a morning routine tailored to your lifestyle, you’ll
                         <h3 class="post-title">The Neuroscience of Mindfulness: A Path to Peak Performance</h3>
                         <p class="post-meta">By PS4Wellbeing | July 15, 2025</p>
                         <p class="post-excerpt">
-   Starting your day with intention can set the tone for everything that follows. A well-structured morning routine not only boosts productivity but also improves mental clarity and emotional balance.
+                            Starting your day with intention can set the tone for everything that follows. A well-structured morning routine not only boosts productivity but also improves mental clarity and emotional balance.
 
-    <span class="more-text" style="display:none;">
-       Begin with a few minutes of mindfulness—this could be meditation, deep breathing, or simply enjoying a quiet moment without distractions. This practice helps you ground yourself and approach the day with focus. Next, incorporate light physical activity such as stretching, yoga, or a brisk walk. Physical movement wakes up your body, increases energy levels, and stimulates the mind.
+                            <span class="more-text" style="display:none;">
+                                Begin with a few minutes of mindfulness—this could be meditation, deep breathing, or simply enjoying a quiet moment without distractions. This practice helps you ground yourself and approach the day with focus. Next, incorporate light physical activity such as stretching, yoga, or a brisk walk. Physical movement wakes up your body, increases energy levels, and stimulates the mind.
 
-Fuel your body with a healthy breakfast rich in protein, fiber, and essential nutrients. Avoid rushing through your meal; instead, use this time to plan your day and prioritize key tasks. Journaling can also be a powerful addition—writing down your goals and intentions creates a sense of purpose.
+                                Fuel your body with a healthy breakfast rich in protein, fiber, and essential nutrients. Avoid rushing through your meal; instead, use this time to plan your day and prioritize key tasks. Journaling can also be a powerful addition—writing down your goals and intentions creates a sense of purpose.
 
-Finally, minimize early-morning exposure to emails and social media. Give yourself at least 30 minutes to focus inward before engaging with the outside world.
+                                Finally, minimize early-morning exposure to emails and social media. Give yourself at least 30 minutes to focus inward before engaging with the outside world.
 
-By consistently following a morning routine tailored to your lifestyle, you’ll find yourself more organized, less stressed, and better equipped to tackle daily challenges with confidence.
-
-    </span>
-</p>
-<a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-
+                                By consistently following a morning routine tailored to your lifestyle, you'll find yourself more organized, less stressed, and better equipped to tackle daily challenges with confidence.
+                            </span>
+                        </p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
@@ -597,13 +463,13 @@ By consistently following a morning routine tailored to your lifestyle, you’ll
             </div>
         </div>
     </section>
+    
     <a href="https://wa.me/97466648078" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
         <img src="image/w.png" alt="WhatsApp logo" width="30" height="30">
     </a>
 
-<script>
-
- // Mobile menu toggle
+    <script>
+        // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
 
@@ -625,29 +491,23 @@ By consistently following a morning routine tailored to your lifestyle, you’ll
             });
         }
 
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".read-more").forEach(function (btn) {
+                btn.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const excerpt = this.previousElementSibling; // p tag
+                    const moreText = excerpt.querySelector(".more-text");
 
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".read-more").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-            e.preventDefault();
-            const excerpt = this.previousElementSibling; // p tag
-            const moreText = excerpt.querySelector(".more-text");
-
-            if (moreText.style.display === "none" || moreText.style.display === "") {
-                moreText.style.display = "inline";
-                this.innerHTML = 'Read Less <i class="fas fa-arrow-up"></i>';
-            } else {
-                moreText.style.display = "none";
-                this.innerHTML = 'Read More <i class="fas fa-arrow-right"></i>';
-            }
+                    if (moreText.style.display === "none" || moreText.style.display === "") {
+                        moreText.style.display = "inline";
+                        this.innerHTML = 'Read Less <i class="fas fa-arrow-up"></i>';
+                    } else {
+                        moreText.style.display = "none";
+                        this.innerHTML = 'Read More <i class="fas fa-arrow-right"></i>';
+                    }
+                });
+            });
         });
-    });
-});
-</script>
-
-
+    </script>
 </body>
-
 </html>
