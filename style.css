@@ -361,7 +361,7 @@ nav {
     content: '•';
     position: absolute;
     left: 0;
-    color: var(--main-color);
+    color: #fffff;
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -818,3 +818,4 @@ footer {
         margin-right: 0;
     }
 }
+
