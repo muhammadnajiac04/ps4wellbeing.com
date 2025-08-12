@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS4Wellbeing: Transformative Corporate Training & Coaching for Wellbeing</title>
+    <meta name="description" content="PS4Wellbeing offers transformative wellbeing solutions through corporate training and individual coaching. Rooted in positive psychology and emotional intelligence, our programs build resilience and help employees and individuals thrive.">
+    <meta name="keywords" content="PS4Wellbeing, wellbeing, corporate training, coaching, positive psychology, emotional intelligence, resilience, mental health, employee wellness, workplace wellbeing, personal development, NLP, mindfulness, job crafting">
+    <meta name="author" content="PS4Wellbeing">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.ps4wellbeing.com/">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
+    <link rel="preload" href="path/to/AbadiMT.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="image/lg.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></noscript>
+
+    <style>
+        /* CSS Variables for Easy Theme Change */
+        :root {
+            --main-color: #99686E;
+            --secondary-color: #DCAE96;
+            --accent-color: #B2AC88;
+            --coral-color: #FF9B8A;
+            --text-color: #333;
+            --light-bg-color: #f8f9fa;
+            --card-bg-color: #ffffff;
+            --light-text-color: #fff;
+            --footer-bg-color: #f0f4f2;
+        }
+        
+        /* Base Styles and Layout */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Abadi MT';
+            src: url('path/to/AbadiMT.woff2') format('woff2'),
+                 url('path/to/AbadiMT.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap; 
+        }
+
+        body {
+            font-family: 'Abadi MT', 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+ header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 120px;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 105px;
+            width: auto;
+            transition: height 0.3s ease;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #99686E;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--main-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--main-color);
+        }
+
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--main-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+            color: var(--light-text-color);
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            position: relative;
+            min-height: 500px;
+            z-index: 2;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .heading-logo {
+            width: clamp(250px, 50vw, 600px); 
+            height: auto;
+            max-width: 100%;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+        .h1-size-text {
+            font-family: 'Abadi MT', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: normal; /* not bold */
+            margin: 0;
+            color: var(--light-text-color);
+        }
+
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: var(--light-text-color);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            color: var(--light-text-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--light-text-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--card-bg-color);
+            color: var(--main-color);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* General Sections Styling */
+        .new-footer-section {
+            padding: 100px 0;
+        }
+        .new-footer-section {
+            background: rgba(178, 172, 136, 1);
+        }
+
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--main-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* Research Section */
+        .research {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #99686E 0%, #DCAE96 100%);
+            color: white;
+            text-align: center;
+        }
+
+        /* Blog Section */
+        .blog-section {
+           background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 50%, var(--main-color) 100%);
+
+
+
+            padding: 100px 0;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-post {
+            background: linear-gradient(135deg, var(--main-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+.post-image {
+    width: calc(100% - 60px); /* Shrink width to create space */
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin: 35px auto 0; /* Creates top & side space */
+}
+
+        .post-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .post-title {
+            font-size: 1.5rem;
+            color: var(--main-color);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .post-meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-excerpt {
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: var(--main-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .read-more:hover {
+            color: var(--secondary-color);
+        }
+
+        .read-more i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+        .all-posts-link-container {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .all-posts-link {
+            display: inline-block;
+            color: var(--light-text-color);
+            background: var(--accent-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .all-posts-link:hover {
+            background: var(--main-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* Enhanced Research Section - Additional Styles */
+        @media (max-width: 480px) {
+        }
+
+        @media (max-width: 768px) {
+        }
+        
+        /* Footer Section Styling */
+        .new-footer-section {
+            background-color: var(--footer-bg-color);
+            padding: 60px 0;
+        }
+
+        /* Mobile Menu and Responsive Adjustments */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--main-color);
+        }
+
+        .mobile-menu-btn.active + .nav-links {
+            display: flex;
+        }
+
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            z-index: 999;
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 0.8rem 0;
+            }
+            .logo-image {
+                height: 60px;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--card-bg-color);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero .container {
+                flex-direction: column-reverse;
+                text-align: center;
+                min-height: auto;
+            }
+            .hero-content {
+                padding-right: 0;
+                align-items: center;
+            }
+.more-text {
+    display: none;
+}
+
+            .new-footer-main {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .new-footer-about, .new-footer-links {
+                width: 100%;
+                text-align: center;
+            }
+            .new-footer-links {
+                justify-content: center;
+                gap: 2rem;
+            }
+            .social-icons {
+                text-align: center;
+            }
+            /* Mobile responsive for packages */
+            .package-item, .package-item:nth-child(even) {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .package-image {
+                flex: none;
+                width: 100%;
+                max-width: 400px;
+                height: 200px;
+                border-radius: 15px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            /* Mobile carousel for detailed services */
+            .detailed-services-grid {
+                display: none;
+            }
+            .mobile-carousel {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+ <header>
+        <nav class="container">
+            <a href="#home" class="logo" aria-label="PS4Wellbeing Home">
+                <img src="image/loggooo.png" class="logo-image" alt="PS4Wellbeing Logo">
+            </a>
+            <ul class="nav-links" id="mobile-menu-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Programs</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#detailed-services">Our Expertise</a></li>
+                <li><a href="blog.html" id="blog-link">Blog</a></li>
+                <li><a href="https://wa.me/+974 66648078" target="_blank">Free Consult</a></li>
+                <li><a href="#contact-details">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu-links">☰</button>
+        </nav>
+    </header>
+
+
+    <section id="blog" class="blog-section">
+        <div class="container">
+
+            <h2 class="section-title"><br>Our Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <div class="post-image" style="background-image: url('image/3.jpg');"></div>
+                    <div class="post-content">
+                        <h3 class="post-title">The Power of Positive Psychology in the Workplace</h3>
+                        <p class="post-meta">By PS4Wellbeing | August 10, 2025</p>
+                        <p class="post-excerpt">
+   Starting your day with intention can set the tone for everything that follows. A well-structured morning routine not only boosts productivity but also improves mental clarity and emotional balance.
+
+    <span class="more-text" style="display:none;">
+       Begin with a few minutes of mindfulness—this could be meditation, deep breathing, or simply enjoying a quiet moment without distractions. This practice helps you ground yourself and approach the day with focus. Next, incorporate light physical activity such as stretching, yoga, or a brisk walk. Physical movement wakes up your body, increases energy levels, and stimulates the mind.
+
+Fuel your body with a healthy breakfast rich in protein, fiber, and essential nutrients. Avoid rushing through your meal; instead, use this time to plan your day and prioritize key tasks. Journaling can also be a powerful addition—writing down your goals and intentions creates a sense of purpose.
+
+Finally, minimize early-morning exposure to emails and social media. Give yourself at least 30 minutes to focus inward before engaging with the outside world.
+
+By consistently following a morning routine tailored to your lifestyle, you’ll find yourself more organized, less stressed, and better equipped to tackle daily challenges with confidence.
+
+    </span>
+</p>
+<a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <div class="post-image" style="background-image: url('image/1.jpg');"></div>
+                    <div class="post-content">
+                        <h3 class="post-title">Job Crafting: Redefining Your Role for Greater Fulfillment</h3>
+                        <p class="post-meta">By PS4Wellbeing | July 28, 2025</p>
+                        <p class="post-excerpt">
+   Starting your day with intention can set the tone for everything that follows. A well-structured morning routine not only boosts productivity but also improves mental clarity and emotional balance.
+
+    <span class="more-text" style="display:none;">
+       Begin with a few minutes of mindfulness—this could be meditation, deep breathing, or simply enjoying a quiet moment without distractions. This practice helps you ground yourself and approach the day with focus. Next, incorporate light physical activity such as stretching, yoga, or a brisk walk. Physical movement wakes up your body, increases energy levels, and stimulates the mind.
+
+Fuel your body with a healthy breakfast rich in protein, fiber, and essential nutrients. Avoid rushing through your meal; instead, use this time to plan your day and prioritize key tasks. Journaling can also be a powerful addition—writing down your goals and intentions creates a sense of purpose.
+
+Finally, minimize early-morning exposure to emails and social media. Give yourself at least 30 minutes to focus inward before engaging with the outside world.
+
+By consistently following a morning routine tailored to your lifestyle, you’ll find yourself more organized, less stressed, and better equipped to tackle daily challenges with confidence.
+
+    </span>
+</p>
+<a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <div class="post-image" style="background-image: url('image/2.jpg');"></div>
+                    <div class="post-content">
+                        <h3 class="post-title">The Neuroscience of Mindfulness: A Path to Peak Performance</h3>
+                        <p class="post-meta">By PS4Wellbeing | July 15, 2025</p>
+                        <p class="post-excerpt">
+   Starting your day with intention can set the tone for everything that follows. A well-structured morning routine not only boosts productivity but also improves mental clarity and emotional balance.
+
+    <span class="more-text" style="display:none;">
+       Begin with a few minutes of mindfulness—this could be meditation, deep breathing, or simply enjoying a quiet moment without distractions. This practice helps you ground yourself and approach the day with focus. Next, incorporate light physical activity such as stretching, yoga, or a brisk walk. Physical movement wakes up your body, increases energy levels, and stimulates the mind.
+
+Fuel your body with a healthy breakfast rich in protein, fiber, and essential nutrients. Avoid rushing through your meal; instead, use this time to plan your day and prioritize key tasks. Journaling can also be a powerful addition—writing down your goals and intentions creates a sense of purpose.
+
+Finally, minimize early-morning exposure to emails and social media. Give yourself at least 30 minutes to focus inward before engaging with the outside world.
+
+By consistently following a morning routine tailored to your lifestyle, you’ll find yourself more organized, less stressed, and better equipped to tackle daily challenges with confidence.
+
+    </span>
+</p>
+<a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+
+                    </div>
+                </article>
+            </div>
+            <div class="all-posts-link-container">
+                <a href="#" class="all-posts-link">View All Posts</a>
+            </div>
+        </div>
+    </section>
+    <a href="https://wa.me/97466648078" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <img src="image/w.png" alt="WhatsApp logo" width="30" height="30">
+    </a>
+
+<script>
+
+ // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+        }
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".read-more").forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            const excerpt = this.previousElementSibling; // p tag
+            const moreText = excerpt.querySelector(".more-text");
+
+            if (moreText.style.display === "none" || moreText.style.display === "") {
+                moreText.style.display = "inline";
+                this.innerHTML = 'Read Less <i class="fas fa-arrow-up"></i>';
+            } else {
+                moreText.style.display = "none";
+                this.innerHTML = 'Read More <i class="fas fa-arrow-right"></i>';
+            }
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>
