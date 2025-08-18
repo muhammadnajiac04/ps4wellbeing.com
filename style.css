@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&display=swap');
 
 /* CSS Variables */
 :root {
-    --main-color: #99686E;
-    --secondary-color: #DCAE96;
-    --accent-color: #B2AC88;
-    --coral-color: #FF9B8A;
-    --text-color: #333;
-    --light-bg-color: #f8f9fa;
+    --main-color: #a7805a;
+    --secondary-color: #dcc9b0;
+    --accent-color: #aea781;
+    --coral-color: #d4a574;
+    --text-color: #4a3c2a;
+    --light-bg-color: #f8f6f2;
     --card-bg-color: #ffffff;
     --light-text-color: #fff;
-    --footer-bg-color: #f0f4f2;
+    --footer-bg-color: #f2f0ec;
     --card-radius: 18px;
     --img-radius: 80px;
     --img-margin: 40px;
@@ -42,14 +43,28 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
 
+.menu-bar {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+    width: fit-content;
+}
+
 /* Header & Navigation */
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 120px;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
+    background: transparent;
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
@@ -82,7 +97,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--main-color);
+    color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -118,8 +133,8 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 50%, var(--main-color) 100%);
-    color: var(--light-text-color);
+    background: url("image/bg2.avif") no-repeat center center;
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -146,25 +161,27 @@ nav {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: normal;
     margin: 0 0 1rem 0;
-    color: var(--light-text-color);
+    color: var(--main-color);
+    font-family: 'Garamond', serif;
 }
 
 .hero p {
     font-size: clamp(1rem, 2vw, 1.3rem);
     margin-bottom: 2rem;
     max-width: 600px;
-    color: var(--light-text-color);
+    color: var(--accent-color);
+    font-family: 'Garamond', serif;
 }
 
 .cta-button {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--main-color);
     color: var(--light-text-color);
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid var(--main-color);
     transition: all 0.3s ease;
 }
 
@@ -181,7 +198,7 @@ nav {
 }
 
 .services, .why-choose, .detailed-services {
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 50%, var(--main-color) 100%);
+    background: var(--accent-color);
 }
 
 .wellness-packages {
@@ -197,6 +214,7 @@ nav {
 }
 
 .section-title {
+    font-family: 'Garamond', serif;
     text-align: center;
     font-size: clamp(2rem, 4vw, 2.5rem);
     color: var(--main-color);
@@ -235,7 +253,7 @@ nav {
 }
 
 .service-card:hover {
-    transform: scale(1.05); /* zoom entire card */
+    transform: scale(1.05);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -259,6 +277,7 @@ nav {
     color: var(--main-color);
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-family: 'Garamond', serif;
 }
 
 .service-card-content p {
@@ -297,7 +316,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: calc(var(--img-margin) * 1);
-    background: var(--card-image-bg, #E8D5C6);
+    background: #fff;
 }
 
 .card-image img {
@@ -328,13 +347,15 @@ nav {
     flex-direction: column;
     justify-content: center;
     gap: 12px;
+    background-color: #fff;
 }
 
 .card h2 {
     margin: 0;
-    color: #222;
+    color: var(--main-color);
     font-size: clamp(20px, 2.6vw, 26px);
     line-height: 1.15;
+    font-family: 'Garamond', serif;
 }
 
 .card p {
@@ -369,8 +390,8 @@ nav {
 /* Research Section */
 .research {
     padding: 100px 0;
-    background: linear-gradient(135deg, #99686E 0%, #DCAE96 100%);
-    color: white;
+    background: white;
+    color: var(--main-color);
     text-align: center;
 }
 
@@ -394,7 +415,7 @@ nav {
     font-size: clamp(2rem, 6vw, 3rem);
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: white;
+    color: var(--main-color);
 }
 
 .stat-label {
@@ -418,6 +439,19 @@ nav {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.outcome-card .outcome-icon i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.outcome-card h3 {
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-family: 'Garamond', serif;
 }
 
 .outcome-list {
@@ -445,8 +479,42 @@ nav {
 }
 
 .outcome-list li strong {
-    color: white;
+    color: var(--main-color);
     font-weight: 600;
+}
+
+.research-details {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.research-details p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.research-details .source-link {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+.research-details .source-link a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.research-details .additional-benefits {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.research-impact {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
 
 /* Detailed Services */
@@ -493,6 +561,7 @@ nav {
 }
 
 .detailed-service-title {
+    font-family: 'Garamond', serif;
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: var(--main-color);
@@ -601,10 +670,11 @@ nav {
     gap: 2rem;
 }
 
-.new-footer-links h4 {
+.new-footer-links h2 {
     color: var(--main-color);
     margin-bottom: 1rem;
     font-size: clamp(1rem, 2vw, 1.2rem);
+    font-family: 'Garamond', serif;
 }
 
 .new-footer-links ul {
@@ -642,9 +712,10 @@ footer {
     margin-bottom: 2rem;
 }
 
-.footer-section h4 {
+.footer-section h2 {
     margin-bottom: 1rem;
     color: var(--main-color);
+    font-family: 'Garamond', serif;
 }
 
 .footer-bottom {
@@ -671,6 +742,11 @@ footer {
     text-decoration: none;
     z-index: 999;
     transition: transform 0.3s;
+}
+
+.whatsapp-btn img {
+    width: 30px;
+    height: 30px;
 }
 
 .whatsapp-btn:hover {
@@ -715,6 +791,15 @@ footer {
         padding: 0.8rem 0;
         height: 80px;
     }
+    .menu-bar {
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        top: 0;
+        width: 100%;
+        display: block;
+    }
 
     .logo-image {
         height: 60px;
@@ -723,7 +808,7 @@ footer {
     .nav-links {
         display: none;
         position: absolute;
-        top: 80px; /* Adjusted to header height */
+        top: 80px;
         left: 0;
         right: 0;
         background: var(--card-bg-color);
@@ -818,4 +903,3 @@ footer {
         margin-right: 0;
     }
 }
-
