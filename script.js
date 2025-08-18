@@ -203,7 +203,7 @@ if (window.innerWidth <= 768) {
 // Pause auto-play when page is not visible
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
-        stopAutoPlay();
+        stopAutoPlay(); 
     } else if (window.innerWidth <= 768) {
         startAutoPlay();
     }
