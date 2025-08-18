@@ -133,7 +133,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: url("image/bg2.avif") no-repeat center center;
+    background: url("image/bg22.jpeg") no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -903,3 +903,4 @@ footer {
         margin-right: 0;
     }
 }
+
