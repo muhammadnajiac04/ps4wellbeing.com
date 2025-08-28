@@ -159,7 +159,7 @@ nav {
 }
 
 .heading-logo {
-    width: 90vw;
+    width: 100%;
     max-width: 600px;
     height: auto;
     margin-bottom: 1rem;
@@ -783,6 +783,7 @@ footer#contact-details {
         height: auto;
     }
     
+    
     header.scrolled {
         height: auto;
     }
@@ -842,7 +843,7 @@ footer#contact-details {
     }
 
     .heading-logo {
-        width: 95vw;
+        width: 100%;
         max-width: 400px;
     }
 
@@ -872,6 +873,30 @@ footer#contact-details {
         border-bottom-right-radius: 60px;
     }
 
+    .card-content {
+        padding: 1.5rem; /* Reduce padding */
+        gap: 8px; /* Reduce gap between elements */
+    }
+
+    .card h2 {
+        font-size: 1.25rem; /* Reduce heading font size */
+    }
+
+    .card p {
+        font-size: 0.9rem; /* Reduce paragraph font size */
+        margin-bottom: 0.5rem; /* Add a little space */
+    }
+
+    .package-features {
+        margin: 4px 0 0 1rem; /* Adjust margin */
+    }
+
+    .package-features li {
+        padding: 0.25rem 0 0.25rem 1.25rem; /* Reduce padding */
+        margin: 4px 0; /* Reduce margin */
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
     .new-footer-main {
         flex-direction: column;
         align-items: center;
@@ -899,5 +924,6 @@ footer#contact-details {
     .outcome-list li i {
         margin-bottom: 0.5rem;
         margin-right: 0;
+    
     }
 }
